@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://bij6gmw5galsi"]
+
+[ext_resource type="Script" uid="uid://gree5xw27c2i" path="res://scripts/player.gd" id="1_mvpqy"]
+[ext_resource type="Texture2D" uid="uid://db3war4htto33" path="res://resources/players.png" id="1_niuxy"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mvpqy"]
+atlas = ExtResource("1_niuxy")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1yqc4"]
+size = Vector2(32, 32)
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_mvpqy")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_mvpqy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_1yqc4")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
