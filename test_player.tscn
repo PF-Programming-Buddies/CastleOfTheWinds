@@ -1,17 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://bij6gmw5galsi"]
+[gd_scene load_steps=5 format=3 uid="uid://cse5hhddh5nc7"]
 
-[ext_resource type="Script" uid="uid://gree5xw27c2i" path="res://scripts/player.gd" id="1_mvpqy"]
-[ext_resource type="Texture2D" uid="uid://db3war4htto33" path="res://resources/players.png" id="1_niuxy"]
+[ext_resource type="Script" uid="uid://gree5xw27c2i" path="res://scripts/player.gd" id="1_imyr3"]
+[ext_resource type="Texture2D" uid="uid://db3war4htto33" path="res://resources/players.png" id="2_g318l"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mvpqy"]
-atlas = ExtResource("1_niuxy")
+atlas = ExtResource("2_g318l")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1yqc4"]
 size = Vector2(32, 32)
 
 [node name="Player" type="CharacterBody2D"]
-script = ExtResource("1_mvpqy")
+script = ExtResource("1_imyr3")
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -20,13 +20,9 @@ texture = SubResource("AtlasTexture_mvpqy")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_1yqc4")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-
-[node name="RayCast2D" type="RayCast2D" parent="."]
-
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
-path_desired_distance = 5.0
-target_desired_distance = 5.0
+path_desired_distance = 32.0
+target_desired_distance = 32.0
 path_postprocessing = 1
 avoidance_enabled = true
 debug_enabled = true
