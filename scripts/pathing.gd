@@ -13,7 +13,7 @@ func _tile_data_runtime_update(coords: Vector2i, tile_data: TileData) -> void:
 	if coords in structures.get_used_cells_by_id(0):
 		tile_data.set_navigation_polygon(0, null)
 
-func _process(delta):
+func _unhandled_input(event):
 	if Input.is_action_just_pressed("move"):
 		var mouse_position = get_global_mouse_position()
 		print(mouse_position)
