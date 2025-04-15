@@ -26,11 +26,12 @@ shape = SubResource("RectangleShape2D_1yqc4")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
 path_desired_distance = 5.0
-target_desired_distance = 5.0
+target_desired_distance = 3.0
 path_postprocessing = 1
 avoidance_enabled = true
 debug_enabled = true
 debug_use_custom = true
 debug_path_custom_color = Color(1, 0.0745098, 0.0235294, 1)
 
+[connection signal="target_reached" from="NavigationAgent2D" to="." method="_on_navigation_agent_2d_target_reached"]
 [connection signal="velocity_computed" from="NavigationAgent2D" to="." method="_on_navigation_agent_2d_velocity_computed"]
