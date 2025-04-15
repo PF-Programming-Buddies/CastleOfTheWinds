@@ -4,25 +4,24 @@
 [ext_resource type="Script" uid="uid://bk3ifv6jcjktv" path="res://addons/spanning_table/spanning_cell_container.gd" id="2_yolop"]
 [ext_resource type="PackedScene" uid="uid://cq6alxehhaq0w" path="res://scenes/inventory_section.tscn" id="3_yolop"]
 
-[node name="CanvasLayer" type="CanvasLayer"]
-
-[node name="Panel" type="Panel" parent="."]
+[node name="Panel" type="Panel"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_bottom = 6.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Panel"]
-custom_minimum_size = Vector2(1600, 900)
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = -4.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="SpanningTableContainer" type="Container" parent="Panel/HBoxContainer"]
+[node name="SpanningTableContainer" type="Container" parent="HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -30,67 +29,67 @@ script = ExtResource("1_dpwwk")
 columns = 5
 metadata/_custom_type_script = "uid://cnybr6ahmmwgg"
 
-[node name="SpanningCellContainer" type="Container" parent="Panel/HBoxContainer/SpanningTableContainer"]
+[node name="SpanningCellContainer" type="Container" parent="HBoxContainer/SpanningTableContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("2_yolop")
 metadata/_custom_type_script = "uid://bk3ifv6jcjktv"
 
-[node name="ColorRect" type="ColorRect" parent="Panel/HBoxContainer/SpanningTableContainer/SpanningCellContainer"]
+[node name="ColorRect" type="ColorRect" parent="HBoxContainer/SpanningTableContainer/SpanningCellContainer"]
 layout_mode = 2
 
-[node name="SpanningCellContainer3" type="Container" parent="Panel/HBoxContainer/SpanningTableContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-script = ExtResource("2_yolop")
-metadata/_custom_type_script = "uid://bk3ifv6jcjktv"
-
-[node name="ColorRect" type="ColorRect" parent="Panel/HBoxContainer/SpanningTableContainer/SpanningCellContainer3"]
-layout_mode = 2
-
-[node name="SpanningCellContainer4" type="Container" parent="Panel/HBoxContainer/SpanningTableContainer"]
+[node name="SpanningCellContainer3" type="Container" parent="HBoxContainer/SpanningTableContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("2_yolop")
 metadata/_custom_type_script = "uid://bk3ifv6jcjktv"
 
-[node name="ColorRect" type="ColorRect" parent="Panel/HBoxContainer/SpanningTableContainer/SpanningCellContainer4"]
+[node name="ColorRect" type="ColorRect" parent="HBoxContainer/SpanningTableContainer/SpanningCellContainer3"]
 layout_mode = 2
 
-[node name="SpanningCellContainer5" type="Container" parent="Panel/HBoxContainer/SpanningTableContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-script = ExtResource("2_yolop")
-metadata/_custom_type_script = "uid://bk3ifv6jcjktv"
-
-[node name="ColorRect" type="ColorRect" parent="Panel/HBoxContainer/SpanningTableContainer/SpanningCellContainer5"]
-layout_mode = 2
-
-[node name="SpanningCellContainer6" type="Container" parent="Panel/HBoxContainer/SpanningTableContainer"]
+[node name="SpanningCellContainer4" type="Container" parent="HBoxContainer/SpanningTableContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("2_yolop")
 metadata/_custom_type_script = "uid://bk3ifv6jcjktv"
 
-[node name="ColorRect" type="ColorRect" parent="Panel/HBoxContainer/SpanningTableContainer/SpanningCellContainer6"]
+[node name="ColorRect" type="ColorRect" parent="HBoxContainer/SpanningTableContainer/SpanningCellContainer4"]
 layout_mode = 2
 
-[node name="SpanningCellContainer7" type="Container" parent="Panel/HBoxContainer/SpanningTableContainer"]
+[node name="SpanningCellContainer5" type="Container" parent="HBoxContainer/SpanningTableContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("2_yolop")
 metadata/_custom_type_script = "uid://bk3ifv6jcjktv"
 
-[node name="ColorRect" type="ColorRect" parent="Panel/HBoxContainer/SpanningTableContainer/SpanningCellContainer7"]
+[node name="ColorRect" type="ColorRect" parent="HBoxContainer/SpanningTableContainer/SpanningCellContainer5"]
 layout_mode = 2
 
-[node name="SpanningCellContainer2" type="Container" parent="Panel/HBoxContainer/SpanningTableContainer"]
+[node name="SpanningCellContainer6" type="Container" parent="HBoxContainer/SpanningTableContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("2_yolop")
+metadata/_custom_type_script = "uid://bk3ifv6jcjktv"
+
+[node name="ColorRect" type="ColorRect" parent="HBoxContainer/SpanningTableContainer/SpanningCellContainer6"]
+layout_mode = 2
+
+[node name="SpanningCellContainer7" type="Container" parent="HBoxContainer/SpanningTableContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("2_yolop")
+metadata/_custom_type_script = "uid://bk3ifv6jcjktv"
+
+[node name="ColorRect" type="ColorRect" parent="HBoxContainer/SpanningTableContainer/SpanningCellContainer7"]
+layout_mode = 2
+
+[node name="SpanningCellContainer2" type="Container" parent="HBoxContainer/SpanningTableContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -99,91 +98,91 @@ col_span = 3
 row_span = 4
 metadata/_custom_type_script = "uid://bk3ifv6jcjktv"
 
-[node name="ColorRect" type="ColorRect" parent="Panel/HBoxContainer/SpanningTableContainer/SpanningCellContainer2"]
+[node name="ColorRect" type="ColorRect" parent="HBoxContainer/SpanningTableContainer/SpanningCellContainer2"]
 layout_mode = 2
 
-[node name="SpanningCellContainer8" type="Container" parent="Panel/HBoxContainer/SpanningTableContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-script = ExtResource("2_yolop")
-metadata/_custom_type_script = "uid://bk3ifv6jcjktv"
-
-[node name="ColorRect" type="ColorRect" parent="Panel/HBoxContainer/SpanningTableContainer/SpanningCellContainer8"]
-layout_mode = 2
-
-[node name="SpanningCellContainer9" type="Container" parent="Panel/HBoxContainer/SpanningTableContainer"]
+[node name="SpanningCellContainer8" type="Container" parent="HBoxContainer/SpanningTableContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("2_yolop")
 metadata/_custom_type_script = "uid://bk3ifv6jcjktv"
 
-[node name="ColorRect" type="ColorRect" parent="Panel/HBoxContainer/SpanningTableContainer/SpanningCellContainer9"]
+[node name="ColorRect" type="ColorRect" parent="HBoxContainer/SpanningTableContainer/SpanningCellContainer8"]
 layout_mode = 2
 
-[node name="SpanningCellContainer10" type="Container" parent="Panel/HBoxContainer/SpanningTableContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-script = ExtResource("2_yolop")
-metadata/_custom_type_script = "uid://bk3ifv6jcjktv"
-
-[node name="ColorRect" type="ColorRect" parent="Panel/HBoxContainer/SpanningTableContainer/SpanningCellContainer10"]
-layout_mode = 2
-
-[node name="SpanningCellContainer11" type="Container" parent="Panel/HBoxContainer/SpanningTableContainer"]
+[node name="SpanningCellContainer9" type="Container" parent="HBoxContainer/SpanningTableContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("2_yolop")
 metadata/_custom_type_script = "uid://bk3ifv6jcjktv"
 
-[node name="ColorRect" type="ColorRect" parent="Panel/HBoxContainer/SpanningTableContainer/SpanningCellContainer11"]
+[node name="ColorRect" type="ColorRect" parent="HBoxContainer/SpanningTableContainer/SpanningCellContainer9"]
 layout_mode = 2
 
-[node name="SpanningCellContainer12" type="Container" parent="Panel/HBoxContainer/SpanningTableContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-script = ExtResource("2_yolop")
-metadata/_custom_type_script = "uid://bk3ifv6jcjktv"
-
-[node name="ColorRect" type="ColorRect" parent="Panel/HBoxContainer/SpanningTableContainer/SpanningCellContainer12"]
-layout_mode = 2
-
-[node name="SpanningCellContainer13" type="Container" parent="Panel/HBoxContainer/SpanningTableContainer"]
+[node name="SpanningCellContainer10" type="Container" parent="HBoxContainer/SpanningTableContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("2_yolop")
 metadata/_custom_type_script = "uid://bk3ifv6jcjktv"
 
-[node name="ColorRect" type="ColorRect" parent="Panel/HBoxContainer/SpanningTableContainer/SpanningCellContainer13"]
+[node name="ColorRect" type="ColorRect" parent="HBoxContainer/SpanningTableContainer/SpanningCellContainer10"]
 layout_mode = 2
 
-[node name="SpanningCellContainer14" type="Container" parent="Panel/HBoxContainer/SpanningTableContainer"]
+[node name="SpanningCellContainer11" type="Container" parent="HBoxContainer/SpanningTableContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("2_yolop")
 metadata/_custom_type_script = "uid://bk3ifv6jcjktv"
 
-[node name="ColorRect" type="ColorRect" parent="Panel/HBoxContainer/SpanningTableContainer/SpanningCellContainer14"]
+[node name="ColorRect" type="ColorRect" parent="HBoxContainer/SpanningTableContainer/SpanningCellContainer11"]
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel/HBoxContainer"]
-custom_minimum_size = Vector2(800, 900)
+[node name="SpanningCellContainer12" type="Container" parent="HBoxContainer/SpanningTableContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("2_yolop")
+metadata/_custom_type_script = "uid://bk3ifv6jcjktv"
+
+[node name="ColorRect" type="ColorRect" parent="HBoxContainer/SpanningTableContainer/SpanningCellContainer12"]
 layout_mode = 2
 
-[node name="Floor" parent="Panel/HBoxContainer/VBoxContainer" instance=ExtResource("3_yolop")]
+[node name="SpanningCellContainer13" type="Container" parent="HBoxContainer/SpanningTableContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("2_yolop")
+metadata/_custom_type_script = "uid://bk3ifv6jcjktv"
+
+[node name="ColorRect" type="ColorRect" parent="HBoxContainer/SpanningTableContainer/SpanningCellContainer13"]
 layout_mode = 2
 
-[node name="Floor2" parent="Panel/HBoxContainer/VBoxContainer" instance=ExtResource("3_yolop")]
+[node name="SpanningCellContainer14" type="Container" parent="HBoxContainer/SpanningTableContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("2_yolop")
+metadata/_custom_type_script = "uid://bk3ifv6jcjktv"
+
+[node name="ColorRect" type="ColorRect" parent="HBoxContainer/SpanningTableContainer/SpanningCellContainer14"]
 layout_mode = 2
 
-[node name="Floor3" parent="Panel/HBoxContainer/VBoxContainer" instance=ExtResource("3_yolop")]
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+custom_minimum_size = Vector2(800, 0)
 layout_mode = 2
 
-[node name="Floor4" parent="Panel/HBoxContainer/VBoxContainer" instance=ExtResource("3_yolop")]
+[node name="Floor" parent="HBoxContainer/VBoxContainer" instance=ExtResource("3_yolop")]
+layout_mode = 2
+
+[node name="Floor2" parent="HBoxContainer/VBoxContainer" instance=ExtResource("3_yolop")]
+layout_mode = 2
+
+[node name="Floor3" parent="HBoxContainer/VBoxContainer" instance=ExtResource("3_yolop")]
+layout_mode = 2
+
+[node name="Floor4" parent="HBoxContainer/VBoxContainer" instance=ExtResource("3_yolop")]
 layout_mode = 2
