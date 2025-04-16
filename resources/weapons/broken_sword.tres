@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="WeaponStats" load_steps=4 format=3 uid="uid://0sdtdo37bcyj"]
+
+[ext_resource type="Script" uid="uid://h7kiql3gl60g" path="res://scripts/weapon_stats.gd" id="1_xw33f"]
+[ext_resource type="Texture2D" uid="uid://bmyt64hkof5wh" path="res://resources/weapons.png" id="2_f0kfn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xw33f"]
+atlas = ExtResource("2_f0kfn")
+region = Rect2(-3, 0, 32, 32)
+
+[resource]
+script = ExtResource("1_xw33f")
+weapon_value = 0
+item_name = "Broken Sword"
+sprite = SubResource("AtlasTexture_xw33f")
+weight = 1000
+bulk = 5000
+sell_value = 0
+enchanted = false
+enchanted_level = 0
+cursed = false
+cursed_level = 0
+broken = true
+is_sold = false
+can_sell = false
+metadata/_custom_type_script = "uid://h7kiql3gl60g"

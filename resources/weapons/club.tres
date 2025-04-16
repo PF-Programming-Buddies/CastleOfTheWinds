@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="WeaponStats" load_steps=4 format=3 uid="uid://e6t0g4nfpqmk"]
+
+[ext_resource type="Script" uid="uid://h7kiql3gl60g" path="res://scripts/weapon_stats.gd" id="1_dbvh8"]
+[ext_resource type="Texture2D" uid="uid://bmyt64hkof5wh" path="res://resources/weapons.png" id="2_ea3gf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dbvh8"]
+atlas = ExtResource("2_ea3gf")
+region = Rect2(125, 0, 32, 32)
+
+[resource]
+script = ExtResource("1_dbvh8")
+weapon_value = 1
+item_name = "Club"
+sprite = SubResource("AtlasTexture_dbvh8")
+weight = 1500
+bulk = 3000
+sell_value = 60
+enchanted = false
+enchanted_level = 0
+cursed = false
+cursed_level = 0
+broken = false
+is_sold = true
+can_sell = true
+metadata/_custom_type_script = "uid://h7kiql3gl60g"

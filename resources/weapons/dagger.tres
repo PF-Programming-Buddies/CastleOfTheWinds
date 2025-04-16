@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="WeaponStats" load_steps=4 format=3 uid="uid://b4jmbscgkladi"]
+
+[ext_resource type="Script" uid="uid://h7kiql3gl60g" path="res://scripts/weapon_stats.gd" id="1_mtxms"]
+[ext_resource type="Texture2D" uid="uid://bmyt64hkof5wh" path="res://resources/weapons.png" id="2_ycbmi"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xw33f"]
+atlas = ExtResource("2_ycbmi")
+region = Rect2(29, 0, 32, 32)
+
+[resource]
+script = ExtResource("1_mtxms")
+weapon_value = 2
+item_name = "Dagger"
+sprite = SubResource("AtlasTexture_xw33f")
+identified = false
+weight = 500
+bulk = 500
+sell_value = 240
+enchanted = false
+enchanted_level = 0
+cursed = false
+cursed_level = 0
+broken = false
+is_sold = true
+can_sell = true
+metadata/_custom_type_script = "uid://h7kiql3gl60g"
