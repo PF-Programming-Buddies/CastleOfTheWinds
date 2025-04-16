@@ -18,7 +18,7 @@ func _input(event):
 				Orphanage.add_child(self)
 				Orphanage.old_parent = parent
 				
-				position = old_pos
+				global_position = get_viewport().get_mouse_position()
 
 func equip(item: Item):
 	if item.slot_type == accepted_type:
