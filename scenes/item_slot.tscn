@@ -1,15 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://bu2xjt0p4yn1n"]
+[gd_scene load_steps=4 format=3 uid="uid://bu2xjt0p4yn1n"]
 
 [ext_resource type="Texture2D" uid="uid://bmyt64hkof5wh" path="res://resources/weapons.png" id="1_567tv"]
+[ext_resource type="Script" uid="uid://c8caey4mtc1i1" path="res://scripts/item_slot.gd" id="1_eqbkm"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_eqbkm"]
 atlas = ExtResource("1_567tv")
 region = Rect2(61, 0, 32, 32)
 
 [node name="ItemSlot" type="Panel"]
+z_index = 3
 custom_minimum_size = Vector2(80, 100)
 offset_right = 80.0
 offset_bottom = 100.0
+mouse_filter = 2
+script = ExtResource("1_eqbkm")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 custom_minimum_size = Vector2(60, 0)
@@ -34,3 +38,6 @@ theme_override_font_sizes/font_size = 10
 text = "Enchanted Short Sword of Swaggerness"
 horizontal_alignment = 1
 autowrap_mode = 3
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

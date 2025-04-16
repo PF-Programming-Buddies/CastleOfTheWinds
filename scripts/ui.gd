@@ -21,5 +21,5 @@ func _on_close_pressed():
 	close_active_ui()
 
 func _on_inventory_pressed():
-	get_tree().paused = true
-	inventory.visible = true
+	get_tree().paused = not get_tree().paused
+	inventory.visible = not inventory.visible

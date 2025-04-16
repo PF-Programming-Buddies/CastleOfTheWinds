@@ -15,6 +15,8 @@ extends Resource
 @export var is_sold: bool
 @export var can_sell: bool
 
+@export var slot_type: String
+
 var item_string: String
 
 func update_item_string(default_name: String):

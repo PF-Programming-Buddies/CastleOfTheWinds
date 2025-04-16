@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://deqcykybraun"]
+
+[ext_resource type="Script" uid="uid://b7l0xc84gdx8a" path="res://scripts/orphanage.gd" id="1_1suuk"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+process_mode = 3
+layer = 2
+script = ExtResource("1_1suuk")

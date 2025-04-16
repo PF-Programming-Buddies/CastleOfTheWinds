@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cq6alxehhaq0w"]
+[gd_scene load_steps=3 format=3 uid="uid://cq6alxehhaq0w"]
 
 [ext_resource type="PackedScene" uid="uid://bu2xjt0p4yn1n" path="res://scenes/item_slot.tscn" id="1_b1h8w"]
+[ext_resource type="Script" uid="uid://b3uuloy8o1evh" path="res://scripts/draggable_container.gd" id="1_k4c3e"]
 
 [node name="Floor" type="Panel"]
 offset_right = 800.0
@@ -31,6 +32,7 @@ layout_mode = 2
 [node name="FlowContainer" type="HFlowContainer" parent="ScrollContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
+script = ExtResource("1_k4c3e")
 
 [node name="ItemSlot" parent="ScrollContainer/VBoxContainer/FlowContainer" instance=ExtResource("1_b1h8w")]
 layout_mode = 2

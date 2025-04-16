@@ -15,6 +15,10 @@ run/main_scene="uid://dhgy2by42uatc"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Orphanage="*res://scenes/orphanage.tscn"
+
 [display]
 
 window/size/viewport_width=1600
