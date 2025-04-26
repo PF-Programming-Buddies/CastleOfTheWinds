@@ -1,7 +1,25 @@
-[gd_scene load_steps=4 format=3 uid="uid://bu2xjt0p4yn1n"]
+[gd_scene load_steps=6 format=3 uid="uid://bu2xjt0p4yn1n"]
 
 [ext_resource type="Texture2D" uid="uid://bmyt64hkof5wh" path="res://resources/weapons.png" id="1_567tv"]
 [ext_resource type="Script" uid="uid://c8caey4mtc1i1" path="res://scripts/item_slot.gd" id="1_eqbkm"]
+[ext_resource type="Script" uid="uid://clekqrsk7f4tf" path="res://scripts/item.gd" id="2_l0xgl"]
+
+[sub_resource type="Resource" id="Resource_fa8gv"]
+script = ExtResource("2_l0xgl")
+item_name = ""
+identified = false
+weight = 0
+bulk = 0
+sell_value = 0
+enchanted = false
+enchanted_level = 0
+cursed = false
+cursed_level = 0
+broken = false
+is_sold = false
+can_sell = false
+slot_type = "weapon"
+metadata/_custom_type_script = "uid://clekqrsk7f4tf"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_eqbkm"]
 atlas = ExtResource("1_567tv")
@@ -15,6 +33,7 @@ offset_right = 80.0
 offset_bottom = 100.0
 mouse_filter = 1
 script = ExtResource("1_eqbkm")
+item = SubResource("Resource_fa8gv")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 custom_minimum_size = Vector2(60, 0)

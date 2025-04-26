@@ -2,10 +2,13 @@ class_name ItemSlot
 extends Panel
 var hovered = false
 @export var item: Item
-@export var accepted_type : String
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	var r = randf()
+	var g = randf()
+	var b = randf()
+	$VBoxContainer/Label.self_modulate = Color(r, g,b)
 	
 func _input(event):
 	if event is InputEventMouseButton:
@@ -19,20 +22,6 @@ func _input(event):
 				Orphanage.old_parent = parent
 				
 				global_position = get_viewport().get_mouse_position()
-
-func equip(item: Item):
-	if item.slot_type == accepted_type:
-		# can equiped
-		#if item:
-			# return to inventory
-			# then equip
-		pass
-	elif accepted_type.is_empty():
-		# also can equip
-		pass
-	else:
-		# nah
-		pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

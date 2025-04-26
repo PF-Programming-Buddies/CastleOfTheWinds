@@ -10,7 +10,7 @@ func _input(event):
 		if not empty():
 			var child = get_child(0)
 			if child is Control:
-				child.position = event.position + Vector2(1,1)
+				child.position = event.position + Vector2(2,2)
 	
 	if event is InputEventMouseButton:
 		if event.is_released() and event.button_index == MOUSE_BUTTON_LEFT:
