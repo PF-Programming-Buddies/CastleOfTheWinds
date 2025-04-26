@@ -12,7 +12,7 @@ signal on_item_release(item: ItemEquipResult)
 
 var hovered = false
 
-func _ready():
+func _enter_tree():
 	mouse_entered.connect(on_mouse_entered)
 	mouse_exited.connect(on_mouse_exited)
 	
