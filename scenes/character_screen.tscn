@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://ddwxdmqjahjgs"]
+[gd_scene load_steps=6 format=3 uid="uid://ddwxdmqjahjgs"]
 
 [ext_resource type="Script" uid="uid://cnybr6ahmmwgg" path="res://addons/spanning_table/spanning_table_container.gd" id="1_dpwwk"]
 [ext_resource type="Script" uid="uid://bk3ifv6jcjktv" path="res://addons/spanning_table/spanning_cell_container.gd" id="2_yolop"]
 [ext_resource type="Script" uid="uid://bddfuec51oy1e" path="res://scripts/equipment_slot.gd" id="3_27evy"]
 [ext_resource type="PackedScene" uid="uid://cq6alxehhaq0w" path="res://scenes/inventory_section.tscn" id="3_yolop"]
+[ext_resource type="Texture2D" uid="uid://dpqvhtofiro34" path="res://resources/theguy.png" id="4_3g3ke"]
 
 [node name="Panel" type="Panel"]
 anchors_preset = 15
@@ -43,6 +44,23 @@ mouse_filter = 1
 script = ExtResource("3_27evy")
 accepted_equipment = 9
 
+[node name="Label" type="Label" parent="HBoxContainer/SpanningTableContainer/SpanningCellContainer/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Chest"
+
 [node name="SpanningCellContainer3" type="Container" parent="HBoxContainer/SpanningTableContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -55,6 +73,23 @@ layout_mode = 2
 mouse_filter = 1
 script = ExtResource("3_27evy")
 accepted_equipment = 4
+
+[node name="Label" type="Label" parent="HBoxContainer/SpanningTableContainer/SpanningCellContainer3/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Neck"
 
 [node name="SpanningCellContainer4" type="Container" parent="HBoxContainer/SpanningTableContainer"]
 layout_mode = 2
@@ -69,6 +104,23 @@ mouse_filter = 1
 script = ExtResource("3_27evy")
 accepted_equipment = 10
 
+[node name="Label" type="Label" parent="HBoxContainer/SpanningTableContainer/SpanningCellContainer4/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Cape"
+
 [node name="SpanningCellContainer5" type="Container" parent="HBoxContainer/SpanningTableContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -81,6 +133,23 @@ layout_mode = 2
 mouse_filter = 1
 script = ExtResource("3_27evy")
 accepted_equipment = 1
+
+[node name="Label" type="Label" parent="HBoxContainer/SpanningTableContainer/SpanningCellContainer5/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Helm"
 
 [node name="SpanningCellContainer6" type="Container" parent="HBoxContainer/SpanningTableContainer"]
 layout_mode = 2
@@ -95,6 +164,23 @@ mouse_filter = 1
 script = ExtResource("3_27evy")
 accepted_equipment = 11
 
+[node name="Label" type="Label" parent="HBoxContainer/SpanningTableContainer/SpanningCellContainer6/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Shield"
+
 [node name="SpanningCellContainer7" type="Container" parent="HBoxContainer/SpanningTableContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -108,6 +194,23 @@ mouse_filter = 1
 script = ExtResource("3_27evy")
 accepted_equipment = 12
 
+[node name="Label" type="Label" parent="HBoxContainer/SpanningTableContainer/SpanningCellContainer7/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Bracers"
+
 [node name="SpanningCellContainer2" type="Container" parent="HBoxContainer/SpanningTableContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -117,10 +220,9 @@ col_span = 3
 row_span = 5
 metadata/_custom_type_script = "uid://bk3ifv6jcjktv"
 
-[node name="ColorRect" type="ColorRect" parent="HBoxContainer/SpanningTableContainer/SpanningCellContainer2"]
+[node name="ColorRect" type="TextureRect" parent="HBoxContainer/SpanningTableContainer/SpanningCellContainer2"]
 layout_mode = 2
-mouse_filter = 1
-script = ExtResource("3_27evy")
+texture = ExtResource("4_3g3ke")
 
 [node name="SpanningCellContainer8" type="Container" parent="HBoxContainer/SpanningTableContainer"]
 layout_mode = 2
@@ -135,6 +237,23 @@ mouse_filter = 1
 script = ExtResource("3_27evy")
 accepted_equipment = 7
 
+[node name="Label" type="Label" parent="HBoxContainer/SpanningTableContainer/SpanningCellContainer8/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Gloves"
+
 [node name="SpanningCellContainer9" type="Container" parent="HBoxContainer/SpanningTableContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -148,6 +267,23 @@ mouse_filter = 1
 script = ExtResource("3_27evy")
 accepted_equipment = 2
 
+[node name="Label" type="Label" parent="HBoxContainer/SpanningTableContainer/SpanningCellContainer9/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Weapon"
+
 [node name="SpanningCellContainer10" type="Container" parent="HBoxContainer/SpanningTableContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -159,6 +295,23 @@ metadata/_custom_type_script = "uid://bk3ifv6jcjktv"
 layout_mode = 2
 mouse_filter = 1
 script = ExtResource("3_27evy")
+
+[node name="Label" type="Label" parent="HBoxContainer/SpanningTableContainer/SpanningCellContainer10/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Free Hand"
 
 [node name="SpanningCellContainer11" type="Container" parent="HBoxContainer/SpanningTableContainer"]
 layout_mode = 2
@@ -173,6 +326,23 @@ mouse_filter = 1
 script = ExtResource("3_27evy")
 accepted_equipment = 3
 
+[node name="Label" type="Label" parent="HBoxContainer/SpanningTableContainer/SpanningCellContainer11/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Ring"
+
 [node name="SpanningCellContainer12" type="Container" parent="HBoxContainer/SpanningTableContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -185,6 +355,23 @@ layout_mode = 2
 mouse_filter = 1
 script = ExtResource("3_27evy")
 accepted_equipment = 3
+
+[node name="Label" type="Label" parent="HBoxContainer/SpanningTableContainer/SpanningCellContainer12/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Ring"
 
 [node name="SpanningCellContainer13" type="Container" parent="HBoxContainer/SpanningTableContainer"]
 layout_mode = 2
@@ -199,6 +386,23 @@ mouse_filter = 1
 script = ExtResource("3_27evy")
 accepted_equipment = 13
 
+[node name="Label" type="Label" parent="HBoxContainer/SpanningTableContainer/SpanningCellContainer13/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Belt"
+
 [node name="SpanningCellContainer14" type="Container" parent="HBoxContainer/SpanningTableContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -211,6 +415,23 @@ layout_mode = 2
 mouse_filter = 1
 script = ExtResource("3_27evy")
 accepted_equipment = 8
+
+[node name="Label" type="Label" parent="HBoxContainer/SpanningTableContainer/SpanningCellContainer14/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Boots"
 
 [node name="SpanningCellContainer16" type="Container" parent="HBoxContainer/SpanningTableContainer"]
 layout_mode = 2
@@ -225,6 +446,23 @@ mouse_filter = 1
 script = ExtResource("3_27evy")
 accepted_equipment = 6
 
+[node name="Label" type="Label" parent="HBoxContainer/SpanningTableContainer/SpanningCellContainer16/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Pack"
+
 [node name="SpanningCellContainer15" type="Container" parent="HBoxContainer/SpanningTableContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -238,9 +476,27 @@ mouse_filter = 1
 script = ExtResource("3_27evy")
 accepted_equipment = 5
 
+[node name="Label" type="Label" parent="HBoxContainer/SpanningTableContainer/SpanningCellContainer15/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Purse"
+
 [node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
 custom_minimum_size = Vector2(800, 0)
 layout_mode = 2
+size_flags_horizontal = 3
 
 [node name="Floor" parent="HBoxContainer/VBoxContainer" instance=ExtResource("3_yolop")]
 layout_mode = 2
@@ -252,4 +508,7 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="Floor4" parent="HBoxContainer/VBoxContainer" instance=ExtResource("3_yolop")]
+layout_mode = 2
+
+[node name="Floor5" parent="HBoxContainer/VBoxContainer" instance=ExtResource("3_yolop")]
 layout_mode = 2

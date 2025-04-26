@@ -10,7 +10,7 @@ func on_item_released(itemResult: ItemEquipResult):
 	itemResult.isSuccess = equip(itemResult.item)
 
 func equip(item: Item):
-	if get_child_count() > 0:
+	if get_child_count() > 1:
 		return false
 	if item.slot_type == accepted_equipment or accepted_equipment == Item.SlotType.Any:
 		# can equiped

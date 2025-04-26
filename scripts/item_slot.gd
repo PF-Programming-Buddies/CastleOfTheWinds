@@ -10,8 +10,13 @@ func _ready() -> void:
 	var b = randf()
 	$VBoxContainer/Label.self_modulate = Color(r, g,b)
 	
+	var weapon_type = ["Axe", "Club", "Dagger", "Mace", "Hammer", "MorningStar", "Flail"].pick_random()
+	$VBoxContainer/TextureRect.texture = Items.get_item_texture("Weapons/%s/%s" % [weapon_type+"s", weapon_type]) 
+	
 	item = Item.new()
-	var slot_name = Item.SlotType.keys().pick_random()
+	var keys = Item.SlotType.keys()
+	keys.remove_at(0) # removes the any slot from being picked
+	var slot_name = keys.pick_random()
 	item.slot_type = Item.SlotType[slot_name]
 	tooltip_text = str(slot_name)
 	

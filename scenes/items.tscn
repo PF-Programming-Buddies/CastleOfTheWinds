@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bggl01mipa21o"]
+
+[ext_resource type="Script" uid="uid://dt1g0fbw0ttia" path="res://scripts/items.gd" id="1_cdcin"]
+
+[node name="Items" type="Node"]
+script = ExtResource("1_cdcin")
