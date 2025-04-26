@@ -10,6 +10,11 @@ func _ready() -> void:
 	var b = randf()
 	$VBoxContainer/Label.self_modulate = Color(r, g,b)
 	
+	print(Item.SlotType.keys())
+	
+	item = Item.new()
+	item.slot_type = Item.SlotType.Weapon
+	
 func _input(event):
 	if event is InputEventMouseButton:
 		if event.is_pressed() and event.button_index == MOUSE_BUTTON_LEFT:
@@ -26,7 +31,6 @@ func _input(event):
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
-
 
 func _on_mouse_entered():
 	if visible:

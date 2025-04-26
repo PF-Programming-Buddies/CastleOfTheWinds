@@ -15,7 +15,24 @@ extends Resource
 @export var is_sold: bool
 @export var can_sell: bool
 
-@export var slot_type: String
+enum SlotType {
+	Any,
+	Helmet,
+	Weapon,
+	Ring,
+	Neck,
+	Purse,
+	Pack,
+	Gloves,
+	Boots,
+	Chest,
+	Cape,
+	Shield,
+	Bracers,
+	Belt,
+}
+
+@export var slot_type: SlotType
 
 var item_string: String
 

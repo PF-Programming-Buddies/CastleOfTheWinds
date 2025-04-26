@@ -41,7 +41,7 @@ metadata/_custom_type_script = "uid://bk3ifv6jcjktv"
 layout_mode = 2
 mouse_filter = 1
 script = ExtResource("3_27evy")
-accepted_equipment = "chest"
+accepted_equipment = 9
 
 [node name="SpanningCellContainer3" type="Container" parent="HBoxContainer/SpanningTableContainer"]
 layout_mode = 2
@@ -54,6 +54,7 @@ metadata/_custom_type_script = "uid://bk3ifv6jcjktv"
 layout_mode = 2
 mouse_filter = 1
 script = ExtResource("3_27evy")
+accepted_equipment = 4
 
 [node name="SpanningCellContainer4" type="Container" parent="HBoxContainer/SpanningTableContainer"]
 layout_mode = 2
@@ -66,6 +67,7 @@ metadata/_custom_type_script = "uid://bk3ifv6jcjktv"
 layout_mode = 2
 mouse_filter = 1
 script = ExtResource("3_27evy")
+accepted_equipment = 10
 
 [node name="SpanningCellContainer5" type="Container" parent="HBoxContainer/SpanningTableContainer"]
 layout_mode = 2
@@ -78,6 +80,7 @@ metadata/_custom_type_script = "uid://bk3ifv6jcjktv"
 layout_mode = 2
 mouse_filter = 1
 script = ExtResource("3_27evy")
+accepted_equipment = 1
 
 [node name="SpanningCellContainer6" type="Container" parent="HBoxContainer/SpanningTableContainer"]
 layout_mode = 2
@@ -90,6 +93,7 @@ metadata/_custom_type_script = "uid://bk3ifv6jcjktv"
 layout_mode = 2
 mouse_filter = 1
 script = ExtResource("3_27evy")
+accepted_equipment = 11
 
 [node name="SpanningCellContainer7" type="Container" parent="HBoxContainer/SpanningTableContainer"]
 layout_mode = 2
@@ -102,7 +106,7 @@ metadata/_custom_type_script = "uid://bk3ifv6jcjktv"
 layout_mode = 2
 mouse_filter = 1
 script = ExtResource("3_27evy")
-accepted_equipment = "forearm"
+accepted_equipment = 12
 
 [node name="SpanningCellContainer2" type="Container" parent="HBoxContainer/SpanningTableContainer"]
 layout_mode = 2
@@ -110,7 +114,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("2_yolop")
 col_span = 3
-row_span = 4
+row_span = 5
 metadata/_custom_type_script = "uid://bk3ifv6jcjktv"
 
 [node name="ColorRect" type="ColorRect" parent="HBoxContainer/SpanningTableContainer/SpanningCellContainer2"]
@@ -129,6 +133,7 @@ metadata/_custom_type_script = "uid://bk3ifv6jcjktv"
 layout_mode = 2
 mouse_filter = 1
 script = ExtResource("3_27evy")
+accepted_equipment = 7
 
 [node name="SpanningCellContainer9" type="Container" parent="HBoxContainer/SpanningTableContainer"]
 layout_mode = 2
@@ -141,7 +146,7 @@ metadata/_custom_type_script = "uid://bk3ifv6jcjktv"
 layout_mode = 2
 mouse_filter = 1
 script = ExtResource("3_27evy")
-accepted_equipment = "weapon"
+accepted_equipment = 2
 
 [node name="SpanningCellContainer10" type="Container" parent="HBoxContainer/SpanningTableContainer"]
 layout_mode = 2
@@ -166,7 +171,7 @@ metadata/_custom_type_script = "uid://bk3ifv6jcjktv"
 layout_mode = 2
 mouse_filter = 1
 script = ExtResource("3_27evy")
-accepted_equipment = "ring"
+accepted_equipment = 3
 
 [node name="SpanningCellContainer12" type="Container" parent="HBoxContainer/SpanningTableContainer"]
 layout_mode = 2
@@ -179,6 +184,7 @@ metadata/_custom_type_script = "uid://bk3ifv6jcjktv"
 layout_mode = 2
 mouse_filter = 1
 script = ExtResource("3_27evy")
+accepted_equipment = 3
 
 [node name="SpanningCellContainer13" type="Container" parent="HBoxContainer/SpanningTableContainer"]
 layout_mode = 2
@@ -191,7 +197,7 @@ metadata/_custom_type_script = "uid://bk3ifv6jcjktv"
 layout_mode = 2
 mouse_filter = 1
 script = ExtResource("3_27evy")
-accepted_equipment = "belt"
+accepted_equipment = 13
 
 [node name="SpanningCellContainer14" type="Container" parent="HBoxContainer/SpanningTableContainer"]
 layout_mode = 2
@@ -204,6 +210,33 @@ metadata/_custom_type_script = "uid://bk3ifv6jcjktv"
 layout_mode = 2
 mouse_filter = 1
 script = ExtResource("3_27evy")
+accepted_equipment = 8
+
+[node name="SpanningCellContainer16" type="Container" parent="HBoxContainer/SpanningTableContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("2_yolop")
+metadata/_custom_type_script = "uid://bk3ifv6jcjktv"
+
+[node name="ColorRect" type="ColorRect" parent="HBoxContainer/SpanningTableContainer/SpanningCellContainer16"]
+layout_mode = 2
+mouse_filter = 1
+script = ExtResource("3_27evy")
+accepted_equipment = 6
+
+[node name="SpanningCellContainer15" type="Container" parent="HBoxContainer/SpanningTableContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("2_yolop")
+metadata/_custom_type_script = "uid://bk3ifv6jcjktv"
+
+[node name="ColorRect" type="ColorRect" parent="HBoxContainer/SpanningTableContainer/SpanningCellContainer15"]
+layout_mode = 2
+mouse_filter = 1
+script = ExtResource("3_27evy")
+accepted_equipment = 5
 
 [node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
 custom_minimum_size = Vector2(800, 0)
