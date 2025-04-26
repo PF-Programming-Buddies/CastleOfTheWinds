@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://clpk85wmvcudl"]
+
+[ext_resource type="Script" uid="uid://bf7bjmm6vclnu" path="res://scripts/enemy.gd" id="1_7p1mj"]
+[ext_resource type="Texture2D" uid="uid://cmt4v6e7fsj5s" path="res://resources/baddies.png" id="2_md0e3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ra3w"]
+atlas = ExtResource("2_md0e3")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5uy6h"]
+size = Vector2(32, 32)
+
+[node name="Enemy" type="CharacterBody2D"]
+collision_layer = 3
+script = ExtResource("1_7p1mj")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_4ra3w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_5uy6h")

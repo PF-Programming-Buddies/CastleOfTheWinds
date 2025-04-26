@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://bij6gmw5galsi"]
+[gd_scene load_steps=6 format=3 uid="uid://bij6gmw5galsi"]
 
 [ext_resource type="Script" uid="uid://gree5xw27c2i" path="res://scripts/player.gd" id="1_mvpqy"]
 [ext_resource type="Texture2D" uid="uid://db3war4htto33" path="res://resources/players.png" id="1_niuxy"]
@@ -8,6 +8,9 @@ atlas = ExtResource("1_niuxy")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1yqc4"]
+size = Vector2(30, 30)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mvpqy"]
 size = Vector2(32, 32)
 
 [node name="Player" type="CharacterBody2D"]
@@ -21,6 +24,7 @@ texture = SubResource("AtlasTexture_mvpqy")
 shape = SubResource("RectangleShape2D_1yqc4")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
 
@@ -33,5 +37,15 @@ debug_enabled = true
 debug_use_custom = true
 debug_path_custom_color = Color(1, 0.0745098, 0.0235294, 1)
 
+[node name="Area2D" type="Area2D" parent="."]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_mvpqy")
+debug_color = Color(0.952941, 0, 0.545098, 0.0313726)
+
 [connection signal="target_reached" from="NavigationAgent2D" to="." method="_on_navigation_agent_2d_target_reached"]
 [connection signal="velocity_computed" from="NavigationAgent2D" to="." method="_on_navigation_agent_2d_velocity_computed"]
+[connection signal="waypoint_reached" from="NavigationAgent2D" to="." method="_on_navigation_agent_2d_waypoint_reached"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

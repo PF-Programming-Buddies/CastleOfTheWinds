@@ -1,10 +1,11 @@
-[gd_scene load_steps=15 format=4 uid="uid://dhgy2by42uatc"]
+[gd_scene load_steps=16 format=4 uid="uid://dhgy2by42uatc"]
 
 [ext_resource type="Texture2D" uid="uid://s1nqnp4mje5n" path="res://resources/turfs.png" id="1_pu3yx"]
 [ext_resource type="PackedScene" uid="uid://bij6gmw5galsi" path="res://actors/player.tscn" id="2_7ykc4"]
 [ext_resource type="Script" uid="uid://yi8ev0xodb56" path="res://scripts/pathing.gd" id="2_pu3yx"]
 [ext_resource type="Script" uid="uid://wfmb44wmkjf2" path="res://scripts/ui.gd" id="4_gubc5"]
 [ext_resource type="PackedScene" uid="uid://ddwxdmqjahjgs" path="res://scenes/character_screen.tscn" id="4_pu3yx"]
+[ext_resource type="PackedScene" uid="uid://clpk85wmvcudl" path="res://scenes/enemy.tscn" id="4_rt2n2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gubc5"]
 texture = ExtResource("1_pu3yx")
@@ -452,6 +453,9 @@ tile_set = SubResource("TileSet_c16ls")
 [node name="Player" parent="." instance=ExtResource("2_7ykc4")]
 position = Vector2(400, 464)
 collision_mask = 2
+
+[node name="Enemy" parent="." instance=ExtResource("4_rt2n2")]
+position = Vector2(400, 240)
 
 [node name="Canvas" type="CanvasLayer" parent="."]
 script = ExtResource("4_gubc5")
