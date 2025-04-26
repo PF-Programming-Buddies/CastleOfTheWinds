@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://ddwxdmqjahjgs"]
+[gd_scene load_steps=7 format=3 uid="uid://ddwxdmqjahjgs"]
 
 [ext_resource type="Script" uid="uid://cnybr6ahmmwgg" path="res://addons/spanning_table/spanning_table_container.gd" id="1_dpwwk"]
 [ext_resource type="Script" uid="uid://bk3ifv6jcjktv" path="res://addons/spanning_table/spanning_cell_container.gd" id="2_yolop"]
@@ -6,13 +6,16 @@
 [ext_resource type="PackedScene" uid="uid://cq6alxehhaq0w" path="res://scenes/inventory_section.tscn" id="3_yolop"]
 [ext_resource type="Texture2D" uid="uid://dpqvhtofiro34" path="res://resources/theguy.png" id="4_3g3ke"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3g3ke"]
+bg_color = Color(0.142256, 0.142256, 0.142256, 1)
+
 [node name="Panel" type="Panel"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_bottom = 6.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_3g3ke")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 1

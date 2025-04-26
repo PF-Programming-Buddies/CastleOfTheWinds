@@ -1,11 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://cq6alxehhaq0w"]
+[gd_scene load_steps=5 format=3 uid="uid://cq6alxehhaq0w"]
 
 [ext_resource type="PackedScene" uid="uid://bu2xjt0p4yn1n" path="res://scenes/item_slot.tscn" id="1_b1h8w"]
 [ext_resource type="Script" uid="uid://bj5v1dcx7ooos" path="res://scripts/FloorContainer.gd" id="1_k4c3e"]
 [ext_resource type="Script" uid="uid://bwpa85gje50vf" path="res://scripts/hide_container.gd" id="1_pftkl"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pftkl"]
+bg_color = Color(0.153077, 0.153077, 0.153076, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+
 [node name="Floor" type="Panel"]
-custom_minimum_size = Vector2(0, 30)
+custom_minimum_size = Vector2(0, 45)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -13,6 +20,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_pftkl")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 clip_contents = true
@@ -26,7 +34,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Label" type="Label" parent="VBoxContainer"]
-custom_minimum_size = Vector2(0, 30)
+custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 mouse_filter = 1
 text = "Floor"
@@ -37,69 +45,77 @@ script = ExtResource("1_pftkl")
 [node name="HSeparator" type="HSeparator" parent="VBoxContainer"]
 layout_mode = 2
 
-[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer/MarginContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="FlowContainer" type="HFlowContainer" parent="VBoxContainer/ScrollContainer"]
+[node name="FlowContainer" type="HFlowContainer" parent="VBoxContainer/MarginContainer/ScrollContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_k4c3e")
 
-[node name="ItemSlot" parent="VBoxContainer/ScrollContainer/FlowContainer" instance=ExtResource("1_b1h8w")]
+[node name="ItemSlot" parent="VBoxContainer/MarginContainer/ScrollContainer/FlowContainer" instance=ExtResource("1_b1h8w")]
 layout_mode = 2
 
-[node name="ItemSlot2" parent="VBoxContainer/ScrollContainer/FlowContainer" instance=ExtResource("1_b1h8w")]
+[node name="ItemSlot2" parent="VBoxContainer/MarginContainer/ScrollContainer/FlowContainer" instance=ExtResource("1_b1h8w")]
 layout_mode = 2
 
-[node name="ItemSlot3" parent="VBoxContainer/ScrollContainer/FlowContainer" instance=ExtResource("1_b1h8w")]
+[node name="ItemSlot3" parent="VBoxContainer/MarginContainer/ScrollContainer/FlowContainer" instance=ExtResource("1_b1h8w")]
 layout_mode = 2
 
-[node name="ItemSlot4" parent="VBoxContainer/ScrollContainer/FlowContainer" instance=ExtResource("1_b1h8w")]
+[node name="ItemSlot4" parent="VBoxContainer/MarginContainer/ScrollContainer/FlowContainer" instance=ExtResource("1_b1h8w")]
 layout_mode = 2
 
-[node name="ItemSlot5" parent="VBoxContainer/ScrollContainer/FlowContainer" instance=ExtResource("1_b1h8w")]
+[node name="ItemSlot5" parent="VBoxContainer/MarginContainer/ScrollContainer/FlowContainer" instance=ExtResource("1_b1h8w")]
 layout_mode = 2
 
-[node name="ItemSlot6" parent="VBoxContainer/ScrollContainer/FlowContainer" instance=ExtResource("1_b1h8w")]
+[node name="ItemSlot6" parent="VBoxContainer/MarginContainer/ScrollContainer/FlowContainer" instance=ExtResource("1_b1h8w")]
 layout_mode = 2
 
-[node name="ItemSlot7" parent="VBoxContainer/ScrollContainer/FlowContainer" instance=ExtResource("1_b1h8w")]
+[node name="ItemSlot7" parent="VBoxContainer/MarginContainer/ScrollContainer/FlowContainer" instance=ExtResource("1_b1h8w")]
 layout_mode = 2
 
-[node name="ItemSlot8" parent="VBoxContainer/ScrollContainer/FlowContainer" instance=ExtResource("1_b1h8w")]
+[node name="ItemSlot8" parent="VBoxContainer/MarginContainer/ScrollContainer/FlowContainer" instance=ExtResource("1_b1h8w")]
 layout_mode = 2
 
-[node name="ItemSlot9" parent="VBoxContainer/ScrollContainer/FlowContainer" instance=ExtResource("1_b1h8w")]
+[node name="ItemSlot9" parent="VBoxContainer/MarginContainer/ScrollContainer/FlowContainer" instance=ExtResource("1_b1h8w")]
 layout_mode = 2
 
-[node name="ItemSlot10" parent="VBoxContainer/ScrollContainer/FlowContainer" instance=ExtResource("1_b1h8w")]
+[node name="ItemSlot10" parent="VBoxContainer/MarginContainer/ScrollContainer/FlowContainer" instance=ExtResource("1_b1h8w")]
 layout_mode = 2
 
-[node name="ItemSlot11" parent="VBoxContainer/ScrollContainer/FlowContainer" instance=ExtResource("1_b1h8w")]
+[node name="ItemSlot11" parent="VBoxContainer/MarginContainer/ScrollContainer/FlowContainer" instance=ExtResource("1_b1h8w")]
 layout_mode = 2
 
-[node name="ItemSlot12" parent="VBoxContainer/ScrollContainer/FlowContainer" instance=ExtResource("1_b1h8w")]
+[node name="ItemSlot12" parent="VBoxContainer/MarginContainer/ScrollContainer/FlowContainer" instance=ExtResource("1_b1h8w")]
 layout_mode = 2
 
-[node name="ItemSlot13" parent="VBoxContainer/ScrollContainer/FlowContainer" instance=ExtResource("1_b1h8w")]
+[node name="ItemSlot13" parent="VBoxContainer/MarginContainer/ScrollContainer/FlowContainer" instance=ExtResource("1_b1h8w")]
 layout_mode = 2
 
-[node name="ItemSlot14" parent="VBoxContainer/ScrollContainer/FlowContainer" instance=ExtResource("1_b1h8w")]
+[node name="ItemSlot14" parent="VBoxContainer/MarginContainer/ScrollContainer/FlowContainer" instance=ExtResource("1_b1h8w")]
 layout_mode = 2
 
-[node name="ItemSlot15" parent="VBoxContainer/ScrollContainer/FlowContainer" instance=ExtResource("1_b1h8w")]
+[node name="ItemSlot15" parent="VBoxContainer/MarginContainer/ScrollContainer/FlowContainer" instance=ExtResource("1_b1h8w")]
 layout_mode = 2
 
-[node name="ItemSlot16" parent="VBoxContainer/ScrollContainer/FlowContainer" instance=ExtResource("1_b1h8w")]
+[node name="ItemSlot16" parent="VBoxContainer/MarginContainer/ScrollContainer/FlowContainer" instance=ExtResource("1_b1h8w")]
 layout_mode = 2
 
-[node name="ItemSlot17" parent="VBoxContainer/ScrollContainer/FlowContainer" instance=ExtResource("1_b1h8w")]
+[node name="ItemSlot17" parent="VBoxContainer/MarginContainer/ScrollContainer/FlowContainer" instance=ExtResource("1_b1h8w")]
 layout_mode = 2
 
-[node name="ItemSlot18" parent="VBoxContainer/ScrollContainer/FlowContainer" instance=ExtResource("1_b1h8w")]
+[node name="ItemSlot18" parent="VBoxContainer/MarginContainer/ScrollContainer/FlowContainer" instance=ExtResource("1_b1h8w")]
 layout_mode = 2
 
 [connection signal="mouse_entered" from="VBoxContainer/Label" to="VBoxContainer/Label" method="_on_mouse_entered"]
