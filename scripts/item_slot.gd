@@ -10,10 +10,10 @@ func _ready() -> void:
 	var b = randf()
 	$VBoxContainer/Label.self_modulate = Color(r, g,b)
 	
-	print(Item.SlotType.keys())
-	
 	item = Item.new()
-	item.slot_type = Item.SlotType.Weapon
+	var slot_name = Item.SlotType.keys().pick_random()
+	item.slot_type = Item.SlotType[slot_name]
+	tooltip_text = str(slot_name)
 	
 func _input(event):
 	if event is InputEventMouseButton:
